@@ -1,5 +1,6 @@
 import perfil from "../assets/perfil.jpeg";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 const About = () => {
   return (
     <Wrapper>
@@ -52,12 +53,11 @@ const About = () => {
             </h2>
 
             <ul className="resume_experience list-unstyled mt-4">
+              {/* peer tutor start here */}
               <li>
                 <span className="circle-fill"></span>
                 <h3 className="fs-5 fw-bold">Peer Tutor</h3>
-                <small>
-                  Sep 2023 - Present | Algonquin College, Ottawa, ON
-                </small>
+                <small>Sep 2023 - Present | Algonquin College, Ottawa ON</small>
                 <ul className="experience_context mt-2 ps-3 fw-medium">
                   <li>
                     <strong>Effectively communicated</strong> technical concepts
@@ -72,6 +72,58 @@ const About = () => {
                     exercises.
                   </li>
                 </ul>
+              </li>
+              {/* freelance web developer start here */}
+              <li>
+                <span className="circle-fill"></span>
+                <h3 className="fs-5 fw-bold">Freelance Developer </h3>
+                <small>Jul 2023 - Present | Ottawa ON</small>
+                <div className="e-commerce mt-3">
+                  <h4 className="fw-medium">
+                    Cozy Sloth E-Commerce |{" "}
+                    <Link to="https://cozy-sloth.netlify.app/" className="link">
+                      Website
+                    </Link>
+                  </h4>
+                  <ul className="experience_context mt-2 ps-3 ">
+                    <li>
+                      Created a responsive e-commerce platform with HTML, CSS,
+                      JavaScript, and React, offering user-friendly navigation,
+                      secure payment processing via Stripe API, and improved
+                      performance for a shopping experience.
+                    </li>
+                    <li>
+                      Deployed the application on Netlify and established an
+                      efficient CI/CD pipeline, leading to a remarkable 70%
+                      reduction in deployment time.
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="job-tracking mt-3">
+                  <h4 className="fw-medium">
+                    Job Application Tracking |{" "}
+                    <Link
+                      to="https://job-tracking-yl.netlify.app/"
+                      className="link"
+                    >
+                      Website
+                    </Link>
+                  </h4>
+                  <ul className="experience_context mt-2 ps-3 fw-medium">
+                    <li>
+                      Developed an efficient job application management system
+                      using JavaScript and React, incorporating features such as
+                      real-time job status updates, intuitive filtering, sorting
+                      options, and interactive data visualizations.
+                    </li>
+                    <li>
+                      Leveraged Redux for state management, along with REST APIs
+                      for seamless data retrieval, resulting in an optimized job
+                      application tracking experience.
+                    </li>
+                  </ul>
+                </div>
               </li>
               {/* service assistant start here */}
               <li>
@@ -144,7 +196,7 @@ const About = () => {
                 <span className="circle-fill"></span>
                 <h3 className="fs-5 fw-bold">Bachelor's Degree in Japanese</h3>
                 <small>2015 - 2019 | Yangtze Normal University, China</small>
-                <p className="mt-2 fw-medium">
+                <p className="mt-2">
                   During my studies, I acquired a strong understanding of the
                   language and culture. Additionally, I gained knowledge in
                   Japanese economics, which provided me with an insight into the
@@ -170,6 +222,11 @@ const Wrapper = styled.section`
     border-radius: 50%;
   }
 
+  .link {
+    color: #2563eb;
+    text-decoration: underline;
+    font-weight: 500;
+  }
   .circle-fill {
     display: inline-block;
     width: 12px;
@@ -242,9 +299,9 @@ const Wrapper = styled.section`
   .education_context li,
   .resume_experience p {
     width: 100%;
-    color: #292930;
+    color: #1e293b;
     margin-top: 0.5rem;
-    font-weight: 500;
+    font-weight: 400;
     padding-left: 0.5rem;
     line-height: 26px;
     max-width: 550px;
