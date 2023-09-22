@@ -38,7 +38,7 @@ const About = () => {
         </article>
       </div>
 
-      <div className="resume">
+      <div className="resume align-element">
         <div className="subtitle">
           <span className="circle-fill"></span>
           <span>Take risks and embrace the adventure of life</span>
@@ -241,24 +241,33 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
     margin: 8rem auto 1rem;
   }
 
-  .subtitle h1 {
-    color: black;
+  .subtitle {
     text-align: center;
-    padding-top: 20px;
-    font-size: 30px;
+    h1 {
+      padding-top: 20px;
+      font-size: 30px;
+    }
   }
 
   .resume_container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 80px 30px;
+    padding: 4rem 0;
   }
 
+  @media screen and (max-width: 576px) {
+    .resume {
+      margin-top: 4rem;
+    }
+
+    .resume_container {
+      padding: 1.25rem 0;
+    }
+  }
   .resume_block {
     width: 50%;
     min-width: 400px;
