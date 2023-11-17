@@ -44,7 +44,7 @@ export const skills = [
   },
   {
     id: nanoid(),
-    title: "Python",
+    title: "Python/Django",
     icon: <TbBrandPython className="h-16 w-16 text-emerald-500" />,
     text: "Proficiency in Python, developing versatile applications and scripts for a wide range of use cases, from data analysis to web development.",
   },
@@ -80,6 +80,7 @@ export const projects = [
     url: "/projects/stu-sys",
     tech: "HTML CSS PHP SQL",
   },
+
   {
     id: nanoid(),
     name: "ToDo List",

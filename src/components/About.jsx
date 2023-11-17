@@ -56,7 +56,7 @@ const About = () => {
               {/* peer tutor start here */}
               <li>
                 <span className="circle-fill"></span>
-                <h3 className="fs-5 fw-bold">Peer Tutor</h3>
+                <h3 className="fs-5 fw-bold">Tutor</h3>
                 <small>Sep 2023 - Present | Algonquin College, Ottawa ON</small>
                 <ul className="experience_context mt-2 ps-3 fw-medium">
                   <li>
@@ -172,7 +172,7 @@ const About = () => {
                   </li>
                   <li>
                     <strong>Databases</strong>: MySQL, Oracle, PostgreSQL,
-                    Microsoft SQL Server
+                    Microsoft SQL Server, MongoDB
                   </li>
                   <li>
                     <strong>Network</strong>: HTTP, TCP, UDP, IP, OSI model,
@@ -183,8 +183,8 @@ const About = () => {
                     Android
                   </li>
                   <li>
-                    <strong>Frameworks</strong>: Spring Boot, Hibernate, React,
-                    Redux, Bootstrap, Axios
+                    <strong>Frameworks</strong>: Spring Boot, Hibernate, Django,
+                    React, Redux, Bootstrap, Tailwind CSS
                   </li>
                   <li>
                     <strong>Software & Tools</strong>: Git, Docker, Kubernetes,
@@ -247,7 +247,7 @@ const Wrapper = styled.section`
   .subtitle {
     text-align: center;
     h1 {
-      padding-top: 20px;
+      padding-top: 2rem;
       font-size: 30px;
     }
   }
@@ -259,15 +259,6 @@ const Wrapper = styled.section`
     padding: 4rem 0;
   }
 
-  @media screen and (max-width: 576px) {
-    .resume {
-      margin-top: 4rem;
-    }
-
-    .resume_container {
-      padding: 1.25rem 0;
-    }
-  }
   .resume_block {
     width: 50%;
     min-width: 400px;
@@ -314,6 +305,34 @@ const Wrapper = styled.section`
     padding-left: 0.5rem;
     line-height: 26px;
     max-width: 550px;
+  }
+
+  @media screen and (max-width: 820px) {
+    .perfil {
+      height: 50%;
+    }
+    .resume_container {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+    }
+    .resume_block {
+      margin-bottom: 2rem;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .resume {
+      margin-top: 4rem;
+    }
+
+    .resume_container {
+      grid-template-columns: 1fr;
+      padding: 1.25rem 0;
+    }
+
+    .perfil {
+      height: 100%;
+    }
   }
 `;
 export default About;
